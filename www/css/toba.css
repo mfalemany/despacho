@@ -1,0 +1,41 @@
+*{
+
+}
+.ei-cuadro-col-tit{
+	text-align:center;
+	color:#555;
+
+}
+.ei-barra-sup, .ei-barra-sup-tit{
+	font-size: 1.1em;
+	margin: 10px auto auto auto;
+	padding: 5px 0px 5px 5px;
+}
+.item-barra{
+	width: 100%;
+}
+.item-barra-tit{
+	font-size: 1.4em; 
+	text-shadow: 1px 1px 2px #111;
+	text-align: center;
+	width: 100%;
+}
+.ei-cuadro-fila{
+	padding: 6px 0px 6px 0px;
+}
+.ei-barra-sup{
+
+}
+.importante{
+	font-size:1.7em;
+	color: #F00;
+}
+#nombre_responsable{
+	font-size: 1.2em;
+	font-weight: bolder;
+	color:red;
+}
+#existe_resolucion{
+    font-size: 1.7em;
+    font-weight: bold
+}
