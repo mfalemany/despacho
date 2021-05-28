@@ -57,6 +57,10 @@ class ci_adscripciones extends despacho_ci
 	function evt__guardar()
 	{	
 		try{
+			$ads = $this->get_datos('adscripciones')->get_filas();
+			if(count($ads) == 0){
+				throw new toba_error("Para guardar una resolución debe cargarle al menos una adscripción");
+			}
 			$this->get_datos()->sincronizar();
 			$this->get_datos()->resetear();
 			$this->set_pantalla('pant_lista_adscripciones');
@@ -70,8 +74,8 @@ class ci_adscripciones extends despacho_ci
 		$this->set_pantalla('pant_lista_adscripciones');
 	}
 
-	function get_datos(){
-		return $this->dep('datos');
+	function get_datos($tabla = NULL){
+		return ($tabla) ? $this->dep('datos')->tabla($tabla) : $this->dep('datos');
 	}
 
 	
